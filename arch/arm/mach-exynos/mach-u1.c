@@ -225,13 +225,6 @@ static struct wacom_g5_callbacks *wacom_callbacks;
 #define SMDKC210_UFCON_DEFAULT	(S3C2410_UFCON_FIFOMODE |	\
 				 S5PV210_UFCON_TXTRIG4 |	\
 				 S5PV210_UFCON_RXTRIG4)
-static int gps_is_running;
-
-void set_gps_uart_op(int onoff)
-{
-        pr_info("%s: %s\n", __func__, onoff ? "on" : "off");
-	        gps_is_running = onoff;
-		}
 
 static struct s3c2410_uartcfg smdkc210_uartcfgs[] __initdata = {
 	[0] = {
